@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 02</title>
+    
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>My second form</h1>
+    <form action="cadastro.php" method="get" autocomplete="on" required  >
+        <p>
+            <label for="iusu">Usuário:</label>
+            <input type="text" name="usu" id="iusu"  placeholder="Digite seu nome" autocomplete="username" minlength="2">
+        </p>
+        <p>
+            <label for="iusuario">Senha:</label>
+            <input type="password" name="senha" id="iusuario" required placeholder="Digite sua senha" autocomplete="current-password" minlength="5">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    
+</body>
+</html>
