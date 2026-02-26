@@ -3,31 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário 02</title>
-    
+    <title>Formulário email</title>
     <style>
         body {
+            background-color: rgb(0, 146, 251);
             font-family: Arial, Helvetica, sans-serif;
-            background-color: blueviolet;
         }
     </style>
+
 </head>
 <body>
-    <h1>My second form</h1>
-    <form action="cadastro.php" method="get" autocomplete="on" required  >
-        <p>
-            <label for="iusu">Usuário:</label>
-            <input type="text" name="usu" id="iusu"  placeholder="Digite seu nome" autocomplete="username" minlength="2">
-        </p>
-        <p>
-            <label for="iusuario">Senha:</label>
-            <input type="password" name="senha" id="iusuario" required placeholder="Digite sua senha" autocomplete="current-password" minlength="5">
-        </p>
-        <p>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-        </p>
-    </form>
+    <h1>Email's forms</h1>
+        <form action="email.php" method="get" autocomplete="on">
+            <p>
+                <lable for="iemail">Email:</lable>
+                <input type="email" name="email" id="iemail" required autocomplete="email" placeholder="Digite seu Email">
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        
+        </form>
     
 </body>
 </html>

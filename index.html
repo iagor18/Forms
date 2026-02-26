@@ -13,25 +13,70 @@
     body {
         background-color: blue;
     }
+
+    .check {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.check label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 </style>
 
 </head>
 <body>
     <h1>My third site</h1>
 
-    <form action="cadastro.php" method="post" autocomplete="on">
-        <p> 
-            <label for="inome">Nome</label>
-            <input type="text" name="nome" id="inome" required autocomplete="username" placeholder="Digite seu nome">
-        </p>
-        <p>
-            <label for="isenha" required autocomplete="on">Senha</label>
-            <input type="password" name="senha" id="isenha" required autocomplete="current-password" placeholder="Digite sua senha">
-        </p>
-        <p>
-            <label for="imedia">Média:</label> 
-            <input type="number" name="media" id="imedia" required placeholder="0 a 10" min="0" max="10" step="0.5" value="5">
-        </p>
+    <fieldset>
+    <Legend>Dados Pessoais</Legend>
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" required autocomplete="username" placeholder="Digite seu nome">
+            </p>
+            <p>
+                <label for="isenha" required autocomplete="on">Senha
+                <input type="password" name="senha" id="isenha" required autocomplete="current-password" placeholder="Digite sua senha"> </label>
+            </p>
+            <p>
+                <label for="imedia">Média:</label>
+                <input type="number" name="media" id="imedia" required placeholder="0 a 10" min="0" max="10" step="0.5" value="5">
+            </p>
+            <p>
+                <label for="idata">Data:</label>
+                <input type="date" name="date" id="idate" required>
+            </p>
+            <p>
+                <label for="iemail">Email:</label>
+                <input type="email" name="email" id="iemail" required placeholder="Seu email" minlength="6">
+            </p>
+    </fieldset>
+
+    <fieldset class="check">
+        <legend>Esportes Favoritos</legend>
+
+    <label>
+        <input type="checkbox" name="bas" id="ibasq">Basquete 
+    </label>
+
+    <label>
+        <input type="checkbox" name="fut" id="ifut">Futebol
+    </label>
+
+    <label>
+        <input type="checkbox" name="nat" id="inat">Natação 
+    </label>
+
+    <label>
+        <input type="checkbox" name="lut" id="ilut">Luta
+    </label>
+        
+
+    </fieldset>
 
         <p>
             <input type="submit" value="Enviar">
