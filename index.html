@@ -11,7 +11,7 @@
     }
 
     body {
-        background-color: blue;
+        background-color: rgb(255, 103, 172);
     }
 
     .check {
@@ -25,11 +25,60 @@
     align-items: center;
     gap: 8px;
 }
+
+.sexo  {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sexo label {
+    display: flex;
+    text-align: center;
+    gap: 8px;
+}
+
+input[type="radio"] {
+    accent-color: rgb(51, 255, 0);
+}
+
 </style>
 
 </head>
 <body>
     <h1>My third site</h1>
+
+    <fieldset class="sexo">
+
+        <legend>Sexo</legend>
+
+        <label>
+            <input type="radio" name="sexo" id="isxmas" checked value="M">Masculino 
+        </label>
+
+        <label>
+            <input type="radio" name="sexo" id="isxfem" value="F">Feminino
+        </label>
+        
+    </fieldset>
+    
+    <p class="campo"> 
+        <label for="irange">Nível de Satisfação:</label>
+        <input type="range" 
+                name="range" 
+                id="irange"  
+                min="1" max="10"     
+                alue="1">
+    </p> 
+    <p>
+        <label for="ifile">Foto do Perfil:</label>
+        <input type="file" name="file" id="ifile">
+    </p>
+        <p class="campo"> 
+        <label for="icolor">Cor:</label>
+        <input type="color" name="color" id="icolor">
+    </p>
+    
 
     <fieldset>
     <Legend>Dados Pessoais</Legend>
@@ -49,6 +98,17 @@
             <p>
                 <label for="idata">Data:</label>
                 <input type="date" name="date" id="idate" required>
+            </p>
+            <p>
+                <label for="itelefone">Telefone</label>
+                <input type="tel" 
+                        name="telefone" 
+                        id="itelefone" 
+                        required 
+                        autocomplete="tel" 
+                        pattern="^\(\d{2}\)\s?\d{4,5}-\d{4}$" 
+                        placeholder="(xx) xxxxx-xxxx">
+
             </p>
             <p>
                 <label for="iemail">Email:</label>
